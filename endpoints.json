@@ -1,0 +1,29 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/gateway/security/v1/sigin/{*catchAll}",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "DownstreamPathTemplate": "/api/v1/sigin/{*catchAll}",
+      "DownstreamServerOptions": {
+        "Host": "localhost",
+        "Port": 5001
+      },
+      "Cors": "ReactApp",
+      "RequiredHeaders": [ "Accept", "Accept-Encoding", "Accept-Language" ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/security/v1/{*catchAll}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/v1/{*catchAll}",
+      "DownstreamServerOptions": {
+        "Host": "localhost",
+        "Port": 5001
+      },
+      "AuthenticationOptions": {
+        "Scheme": "Bearer"
+      },
+      "Cors": "ReactApp",
+      "RequiredHeaders": [ "Accept", "Accept-Encoding", "Accept-Language", "X-CustomerId", "X-DepartmentId", "X-ProjectId" ]
+    }
+  ]
+}
