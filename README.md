@@ -80,3 +80,9 @@ Es el archivo primordial, y describe como es mapeado las rutas en el Gateway, se
     ]
   }
 ```
+
+## FAQ
+
+#### ¿Cual es el proposito de este repositorio?
+
+Portafolio o demo de proyectos hechos por mi persona.
